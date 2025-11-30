@@ -1,7 +1,15 @@
-package com.major.travelai.dto;
+package com.major.travelai.model;
+
+import jakarta.persistence.*;
 import lombok.Data;
+
+@Entity
 @Data
-public class TravelRequestDto{
+public class TravelRequest{
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
     private String source;
     private String destination;
     private String startDate;
